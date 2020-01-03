@@ -1,38 +1,385 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 94%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
+  padding: 8px 45px;
+  border: 3px solid #FFFFFF;
+  background: transparent;
+  font-size: 18px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation*/
+nav {
+  position: fixed;
+  width: 100%;
+  background: #4E4E4E;
+  font-size: 18px;
+  z-index:3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  color: #F1F1F1;
+  text-decoration: none;
 }
+
+nav .container > a {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.nav-right {
+  display: none;
+}
+
+.nav-toggler {
+  background: none;
+  border: none;
+  color: #F1F1F1;
+  font-size: 18px;
+}
+
+/* Landing Page */
+
+
+.landing-page {
+  padding-top: 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url('https://picsum.photos/seed/picsum/1680/1050');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.landing-page-shadow {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.landing-page-shadow .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.landing-page-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50%;
+  font-weight: bold;
+}
+
+.landing-page-text h1 {
+  font-size: 36px;
+}
+
+.landing-page-text h2 {
+  font-size: 18px;
+}
+
+/* About us */
+
+.our-crew {
+  padding: 50px 0;
+  color: black;
+}
+.our-crew h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #152D41;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.employee-photo {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.employee-text {
+  font-size: 18px;
+}
+
+.employee-text h3 {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Offer*/
+
+.offer {
+  background: #405D78;
+  padding: 50px 0;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-row-gap: 1%;
+  width: 70%;
+  margin: 0 auto 15% auto;
+}
+
+.box-container > div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  background: #F1F1F1;
+}
+
+.box-container > div {
+  position: relative;
+}
+
+.box-container .service {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.box-container > div:hover {
+  transform:scale(1.05,1.05);
+  transition: .5s all;
+}
+
+.dot {
+  position: absolute;
+  top: -3%;
+  left: -3%;
+  width: 7%;
+  height: 7%;
+  background: #E07A64;
+  border-radius: 50%;
+}
+
+.offer h1 {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+/* Contact*/
+
+.contact {
+  background: #F1F1F1;
+  padding: 50px 0;
+}
+
+.contact-text {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.contact h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.contact h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+/* Footer*/
+
+footer {
+  
+  background: #4E4E4E;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+footer .container {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.social-icon {
+  background: none;
+  border: none;
+  color: #F1F1F1;
+  font-size: 30px;  
+  margin-right: 50px;
+  
+}
+
+.social-icon:first-of-type {
+  margin-right: 0;
+  margin-left: 100px;
+} 
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 760px;
+}
+
+.employee {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.employee:last-of-type {
+    margin-bottom: 0;
+}
+
+.employee:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.employee:nth-of-type(even) .employee-photo {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+.employee:nth-of-type(even) .employee-text {
+    text-align: right;
+}
+
+.employee-photo {
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 22% 22% 22%;
+    grid-template-rows: auto;
+    grid-column-gap: 10%;
+    grid-row-gap: 10%;
+    width: 70%;
+    margin: 0 auto 50px auto;
+}
+
+.contact-text {
+    float: right;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.social-icon {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.social-icon:first-of-type {
+    margin-right: 0;
+    margin-left: 0;
+} 
+
+  }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 960px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    transition: 1s all;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-right {
+    display: unset;
+}
+
+.nav-right a {
+    margin-left: 45px;
+}
+
+.nav-right a:first-of-type {
+    margin-left: 0;
+}
+
+.nav-toggler {
+    display: none;
+}
+
+.landing-page-text {
+    width: 60%;
+}
+
+.our-crew h1 {
+    text-align: left;
+}
+
+iframe {
+    width: 300px;
+    height: 300px;
+}
+
+  }
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    width: 1200px;
+}
+  }
+
+
+
+  
