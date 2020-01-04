@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import OurCrew from './components/OurCrew';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -10,24 +11,8 @@ function App() {
       <Header />
       <Hero />
       <OurCrew />
+      <Services />
       
-      <section className="offer" id="offer">
-        <div className="container">
-          <h1>We offer following services: </h1>
-          <div className="box-container">
-            <div>
-              <div className="service">Service 1</div>
-              <div className="dot"></div>
-            </div>
-            <div><div className="service">Service 2</div></div>
-            <div><div className="service">Service 3</div></div>
-            <div><div className="service">Service 4</div></div>
-            <div><div className="service">Service 5</div></div>
-            <div><div className="service">Service 6</div></div>
-
-          </div>
-        </div>
-      </section>
       <section className="contact" id="contact">
         <div className="container">
           <h1>Contact details: </h1>
