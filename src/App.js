@@ -1,23 +1,11 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-    <nav>
-        <div className="container">
-            <a href="#">Company name</a>
-            <div className="nav-right">
-                <a href="#our-crew">About us </a>
-                <a href="#offer">Our offer</a>
-                <a href="#contact">Contact Us</a>
-            </div>
-            <button className="nav-toggler">
-                <i className="fas fa-bars"></i>
-            </button>
-        </div>    
-    </nav>
-
+    <Header/>
     
     <section className="landing-page">
         <div className="landing-page-shadow">
