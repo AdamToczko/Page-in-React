@@ -4,20 +4,9 @@ import { services } from "../data";
 
 
 const SingleService = ({serviceText='Service', isNew = false}) => {
-  if(!isNew)
-  return (
-<div>
-  <div className="service">{serviceText}</div>
-  </div>
-  )
-  else{
-    return(
-      <div>
-  <div className="service">{serviceText}<br/> ( new )</div>
-              <div className="dot"></div>
-  </div>
-    )
-  }
+  return (!isNew ? <div><div className="service">{serviceText}</div></div> : 
+  <div><div className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
+  
 }
 
 const Services = () => {
