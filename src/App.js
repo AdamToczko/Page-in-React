@@ -7,14 +7,26 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+const Main = (props) => {
+  const {children} = props
+ console.log(children)
+  return (
+    <main>
+    {children}
+    </main>
+  ) 
+}
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <OurCrew />
-      <Services />
-      <Contact />
+      <Main>
+        <Hero />
+        <OurCrew />
+        <Services />
+        <Contact />
+      </Main>
       <Footer />
      
     </div>
