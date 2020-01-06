@@ -3,17 +3,25 @@ import { services } from "../data";
 
 
 
-const SingleService = ({serviceText='Service'}) => {
+const SingleService = ({serviceText='Service', isNew = false}) => {
+  if(!isNew)
   return (
 <div>
   <div className="service">{serviceText}</div>
   </div>
   )
+  else{
+    return(
+      <div>
+  <div className="service">{serviceText}<br/> ( new )</div>
+              <div className="dot"></div>
+  </div>
+    )
+  }
 }
 
 const Services = () => {
 
-  let text = 'Service';
     return (
        <section className="offer" id="offer">
         <div className="container">
@@ -22,16 +30,6 @@ const Services = () => {
           {services.map((element, idx) => {
 						return <SingleService key={idx} {...element} />
 					})}
-
-            {/* <div>
-              <div className="service">Service 1</div>
-              <div className="dot"></div>
-            </div>
-            <SingleService serviceText={`${text} 2`}  /> 
-            <SingleService serviceText={`${text} 3`}  /> 
-            <SingleService serviceText={`${text} 4`}  /> 
-            <SingleService serviceText={`${text} 5`}  /> 
-            <SingleService serviceText={`${text} 6`}  />  */}
 
           </div>
         </div>
