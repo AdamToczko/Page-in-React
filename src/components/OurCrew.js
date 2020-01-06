@@ -1,20 +1,19 @@
 import React from 'react';
 import { employees } from "../data";
+import { element } from 'prop-types';
 
 
 const SingleEmployee =(props) => {
+  const {img, name, description} = props
  return (
    <div className="employee">
-            <img src="https://picsum.photos/id/237/400/400" 
+            <img src={img}
             alt="pracownik 1" className="employee-photo" />
+
             <div className="employee-text">
-              <h3>First name & Surname [ division ] </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Morbi vel massa et lacus egestas cursus a non magna.
-                  Fusce scelerisque blandit nunc, id malesuada ex lobortis a.
-                  Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula.
-                  Duis efficitur lacinia enim, non tincidunt libero ultrices in.
-                      </p>
+              <h3>{name} </h3>
+              <p>{description}
+              </p>
             </div>
           </div>
  )
@@ -26,9 +25,10 @@ const OurCrew = () => {
         <section className="our-crew" id="our-crew">
         <div className="container">
           <h1>Our Team</h1>
-          <SingleEmployee />
-          <SingleEmployee />
-        
+          {employees.map((element,idx) => {
+            return <SingleEmployee key={idx} {...element} />
+          })
+          }
         </div>
       </section>
     )
