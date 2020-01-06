@@ -1,5 +1,5 @@
 
-const services = [
+export const services = [
 	{
 		serviceText: 'Service 1',
 		isNew: true,

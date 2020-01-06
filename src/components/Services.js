@@ -1,4 +1,7 @@
 import React from 'react';
+import { services } from "../data";
+
+
 
 const SingleService = ({serviceText='Service'}) => {
   return (
@@ -8,7 +11,6 @@ const SingleService = ({serviceText='Service'}) => {
   )
 }
 
-
 const Services = () => {
 
   let text = 'Service';
@@ -17,7 +19,11 @@ const Services = () => {
         <div className="container">
           <h1>We offer following services: </h1>
           <div className="box-container">
-            <div>
+          {services.map((element, idx) => {
+						return <SingleService key={idx} {...element} />
+					})}
+
+            {/* <div>
               <div className="service">Service 1</div>
               <div className="dot"></div>
             </div>
@@ -25,7 +31,7 @@ const Services = () => {
             <SingleService serviceText={`${text} 3`}  /> 
             <SingleService serviceText={`${text} 4`}  /> 
             <SingleService serviceText={`${text} 5`}  /> 
-            <SingleService serviceText={`${text} 6`}  /> 
+            <SingleService serviceText={`${text} 6`}  />  */}
 
           </div>
         </div>
