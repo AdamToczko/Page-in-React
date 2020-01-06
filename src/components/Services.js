@@ -1,5 +1,13 @@
 import React from 'react';
 
+const SingleService = ({serviceText='Service'}) => {
+  return (
+<div>
+  <div className="service">{serviceText}</div>
+  </div>
+  )
+}
+
 const Services = () => {
     return (
        <section className="offer" id="offer">
@@ -10,11 +18,11 @@ const Services = () => {
               <div className="service">Service 1</div>
               <div className="dot"></div>
             </div>
-            <div><div className="service">Service 2</div></div>
-            <div><div className="service">Service 3</div></div>
-            <div><div className="service">Service 4</div></div>
-            <div><div className="service">Service 5</div></div>
-            <div><div className="service">Service 6</div></div>
+            <SingleService /> 
+            <SingleService /> 
+            <SingleService /> 
+            <SingleService /> 
+            <SingleService /> 
 
           </div>
         </div>
