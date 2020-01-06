@@ -1,12 +1,9 @@
 import React from 'react';
 import { services } from "../data";
 
-
-
 const SingleService = ({serviceText='Service', isNew = false}) => {
   return (!isNew ? <div><div className="service">{serviceText}</div></div> : 
   <div><div className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
-  
 }
 
 const Services = () => {

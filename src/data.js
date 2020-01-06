@@ -25,3 +25,25 @@ export const services = [
 		isNew: true,
 	},
 ]
+
+
+export const employees = [
+    {
+    'img': 'https://picsum.photos/id/237/400/400',
+    'name': 'First name & Surname [ division ]',
+    'description': `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Morbi vel massa et lacus egestas cursus a non magna.
+      Fusce scelerisque blandit nunc, id malesuada ex lobortis a.
+      Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula.
+      Duis efficitur lacinia enim, non tincidunt libero ultrices in.`
+    },
+    {
+    'img': 'https://picsum.photos/id/1025/400/400',
+    'name': 'First name & Surname [ division ]',
+    'description': `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Morbi vel massa et lacus egestas cursus a non magna.
+      Fusce scelerisque blandit nunc, id malesuada ex lobortis a.
+      Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula.
+      Duis efficitur lacinia enim, non tincidunt libero ultrices in.`
+      }
+  ]
