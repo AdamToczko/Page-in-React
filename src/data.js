@@ -45,5 +45,15 @@ export const employees = [
       Fusce scelerisque blandit nunc, id malesuada ex lobortis a.
       Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula.
       Duis efficitur lacinia enim, non tincidunt libero ultrices in.`
+      },
+    {
+    'img': 'https://picsum.photos/id/1062/400/400',
+    'name': 'First name & Surname [ division ]',
+    'description': `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Morbi vel massa et lacus egestas cursus a non magna.
+      Fusce scelerisque blandit nunc, id malesuada ex lobortis a.
+      Integer felis nisi, tempor elementum lorem in, varius pellentesque ligula.
+      Duis efficitur lacinia enim, non tincidunt libero ultrices in.`
       }
+
   ]

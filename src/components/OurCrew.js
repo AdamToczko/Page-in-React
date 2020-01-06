@@ -1,6 +1,5 @@
 import React from 'react';
 import { employees } from "../data";
-import { element } from 'prop-types';
 
 
 const SingleEmployee =(props) => {
@@ -9,16 +8,13 @@ const SingleEmployee =(props) => {
    <div className="employee">
             <img src={img}
             alt="pracownik 1" className="employee-photo" />
-
             <div className="employee-text">
               <h3>{name} </h3>
-              <p>{description}
-              </p>
+              <p>{description} </p>
             </div>
           </div>
  )
 }
-
 
 const OurCrew = () => {
     return (
