@@ -8,7 +8,10 @@ const SingleService = ({serviceText='Service'}) => {
   )
 }
 
+
 const Services = () => {
+
+  let text = 'Service';
     return (
        <section className="offer" id="offer">
         <div className="container">
@@ -18,11 +21,11 @@ const Services = () => {
               <div className="service">Service 1</div>
               <div className="dot"></div>
             </div>
-            <SingleService /> 
-            <SingleService /> 
-            <SingleService /> 
-            <SingleService /> 
-            <SingleService /> 
+            <SingleService serviceText={`${text} 2`}  /> 
+            <SingleService serviceText={`${text} 3`}  /> 
+            <SingleService serviceText={`${text} 4`}  /> 
+            <SingleService serviceText={`${text} 5`}  /> 
+            <SingleService serviceText={`${text} 6`}  /> 
 
           </div>
         </div>
