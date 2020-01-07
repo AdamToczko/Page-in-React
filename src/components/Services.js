@@ -1,10 +1,11 @@
 import React from 'react';
 import { services } from "../data";
 
-const SingleService = ({serviceText='Service', isNew = false}) => {
+
+const SingleService = ({serviceText='Service', isNew = false, onElementClick}) => {
   return (!isNew ? 
-  <div><div onClick={()=>{console.log('click on', serviceText, isNew)}}  className="service">{serviceText}</div></div> : 
-  <div><div onClick={()=>{console.log('click on', serviceText, isNew)}} className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
+  <div><div onClick={onElementClick}  className="service">{serviceText}</div></div> : 
+  <div><div onClick={onElementClick} className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
 }
 
 class Services extends React.Component {
@@ -53,7 +54,13 @@ class Services extends React.Component {
                 <h1>We offer following services: </h1>
                 <div className="box-container">
                 {services.map((element, idx) => {
-                  return <SingleService key={idx} {...element} />
+                  return <SingleService key={idx} {...element} 
+										onElementClick={(event)=>{
+											console.log('event', event)
+											console.log('ten element', event.target)
+											console.log('to co weszło do komponentu', {...element}
+                      )}}
+                      />
                 })}
       
                 </div>
