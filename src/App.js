@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Header />
       <Main>
-        <Hero selectedLang={'pl'} />
+        <Hero selectedLang={'en'} />
         <OurCrew />
         <Services />
         <Contact />
