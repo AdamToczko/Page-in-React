@@ -6,8 +6,9 @@ const SingleService = ({serviceText='Service', isNew = false}) => {
   <div><div className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
 }
 
-const Services = () => {
-
+class Services extends React.Component {
+  
+  render(){
     return (
        <section className="offer" id="offer">
         <div className="container">
@@ -20,6 +21,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-    )
-}
+    )}
+} 
+
 export default Services;
