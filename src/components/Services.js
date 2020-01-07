@@ -7,8 +7,18 @@ const SingleService = ({serviceText='Service', isNew = false}) => {
 }
 
 class Services extends React.Component {
+
+  state = {
+    services: services
+  }
+
   
+
+
   render(){
+
+    const { services } = this.state
+
     return (
        <section className="offer" id="offer">
         <div className="container">
