@@ -11,16 +11,22 @@ class Services extends React.Component {
   state = {
     services: [],
     busy: true,
-    error: false
+    error: true
   }
 
   componentDidMount() {
+
+    // simulated loading data from server 
     setTimeout(()=>{
       this.setState({
         services: services,
-        busy: false
+        busy: false,
+        // error: false
       })
   },3000)
+
+
+
   }
 
   render(){
@@ -35,20 +41,29 @@ class Services extends React.Component {
        </section>
      )
     } else {
-      return (
-        <section className="offer" id="offer">
+        if(error) {
+          return(
+         <section className="offer" id="offer">
          <div className="container">
-           <h1>We offer following services: </h1>
-           <div className="box-container">
-           {services.map((element, idx) => {
-             return <SingleService key={idx} {...element} />
-           })}
- 
-           </div>
+           <h1>Could not get data from server  </h1>
          </div>
-       </section>
-     )
-    }
+       </section>)
+
+        } else {
+            return (
+              <section className="offer" id="offer">
+              <div className="container">
+                <h1>We offer following services: </h1>
+                <div className="box-container">
+                {services.map((element, idx) => {
+                  return <SingleService key={idx} {...element} />
+                })}
+      
+                </div>
+              </div>
+            </section>
+          )
+          }}
 
 
     }
