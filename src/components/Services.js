@@ -56,9 +56,9 @@ class Services extends React.Component {
                 {services.map((element, idx) => {
                   return <SingleService key={idx} {...element} 
 										onElementClick={(event)=>{
-											console.log('event', event)
-											console.log('ten element', event.target)
-											console.log('to co weszło do komponentu', {...element}
+											console.log('event:', event)
+											console.log('clicked element:', event.target)
+											console.log('data loaded to element:', {...element}
                       )}}
                       />
                 })}
