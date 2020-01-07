@@ -11,7 +11,7 @@ class Services extends React.Component {
   state = {
     services: [],
     busy: true,
-    error: true
+    error: false
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ class Services extends React.Component {
       this.setState({
         services: services,
         busy: false,
-        // error: false
+        error: false
       })
   },3000)
 
