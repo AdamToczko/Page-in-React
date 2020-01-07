@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 
 const Main = (props) => {
   const {children} = props
- console.log(children)
   return (
     <main>
     {children}

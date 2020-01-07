@@ -2,8 +2,9 @@ import React from 'react';
 import { services } from "../data";
 
 const SingleService = ({serviceText='Service', isNew = false}) => {
-  return (!isNew ? <div><div className="service">{serviceText}</div></div> : 
-  <div><div className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
+  return (!isNew ? 
+  <div><div onClick={()=>{console.log('click on', serviceText, isNew)}}  className="service">{serviceText}</div></div> : 
+  <div><div onClick={()=>{console.log('click on', serviceText, isNew)}} className="service">{serviceText}<br/> ( new )</div><div className="dot"></div></div>)
 }
 
 class Services extends React.Component {
@@ -21,12 +22,8 @@ class Services extends React.Component {
       this.setState({
         services: services,
         busy: false,
-        error: false
       })
   },3000)
-
-
-
   }
 
   render(){
