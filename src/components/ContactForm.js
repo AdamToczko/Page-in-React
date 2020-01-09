@@ -18,10 +18,15 @@ class ContactForm extends React.Component {
 
     inputStateChange = (event) => {
         const {value, name, type, checked } = event.target
-
-        this.setState({
-            [name]: value,
-        })
+        if (type === 'checkbox') {
+			this.setState({
+				[name]: checked,
+			})
+		} else {
+			this.setState({
+				[name]: value,
+			})
+		}
     }
   
     render(){
@@ -99,7 +104,7 @@ class ContactForm extends React.Component {
                                         id='subscription'
                                         type='checkbox'
                                         name='subscription'
-                                        value={subscription}
+                                        checked={subscription}
                                         onChange={(this.inputStateChange)}
 									/>
 									Subscribe
