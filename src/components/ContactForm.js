@@ -12,7 +12,9 @@ class ContactForm extends React.Component {
 		busy: false,
 		error: false,
 	}
-  
+    onFormSubmit = (event) => {
+        event.preventDefault()
+    }
   
     render(){
       
@@ -40,9 +42,10 @@ class ContactForm extends React.Component {
                     <div className="container">
                     <form onSubmit={this.onFormSubmit}>
 							<div>
-								<label>Choose subject</label>
+								<label>Choose subject:   </label>
 								<select
 									name='subject'
+
 								>
 									<option disabled hidden value="hidden">Wybierz temat</option>
 									<option>Subject 1</option>
