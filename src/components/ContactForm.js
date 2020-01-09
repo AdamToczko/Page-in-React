@@ -15,6 +15,14 @@ class ContactForm extends React.Component {
     onFormSubmit = (event) => {
         event.preventDefault()
     }
+
+    inputStateChange = (event) => {
+        const {value, name, type, checked } = event.target
+
+        this.setState({
+            [name]: value,
+        })
+    }
   
     render(){
       
@@ -46,10 +54,7 @@ class ContactForm extends React.Component {
 								<select
 									name='subject'
                                     value={subject}
-                                    onChange={(event)=>
-
-                                    console.log(event.target.value)
-                                    }
+                                    onChange={(this.inputStateChange)}
 								>
 									<option disabled hidden value="hidden">Wybierz temat</option>
 									<option>Subject 1</option>
@@ -63,6 +68,8 @@ class ContactForm extends React.Component {
 									type='text'
 									name='fullName'
 									placeholder='Eneter your full name'
+                                    value={fullName}
+                                    onChange={(this.inputStateChange)}
 								/>
 							</div>
 							<div>
@@ -71,7 +78,8 @@ class ContactForm extends React.Component {
 									type='email'
 									placeholder='Eneter email'
 									name='email'
-		
+                                    value={email}
+                                    onChange={(this.inputStateChange)}
 							
 								/>
 							</div>
@@ -80,7 +88,8 @@ class ContactForm extends React.Component {
 									required
 									placeholder='Type your message'
 									name='content'
-									
+									value={content}
+                                    onChange={(this.inputStateChange)}
 								/>
 							</div>
 							<div>
@@ -90,7 +99,8 @@ class ContactForm extends React.Component {
                                         id='subscription'
                                         type='checkbox'
                                         name='subscription'
-									
+                                        value={subscription}
+                                        onChange={(this.inputStateChange)}
 									/>
 									Subscribe
 								</label>
