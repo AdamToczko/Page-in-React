@@ -17,9 +17,16 @@ class ContactForm extends React.Component {
     onFormSubmit = (event) => {
         event.preventDefault()
 
+        this.setState({
+            busy:true
+        })
+
         setTimeout(()=>{ 
+            this.setState({
+                busy:false
+            })
         console.log('text', this.state)
-        }, 3000)
+        }, 2000)
 
 
 
@@ -66,7 +73,8 @@ class ContactForm extends React.Component {
               return (
                <section className="contact" id="contact">
                     <div className="container">
-                    <form onSubmit={this.onFormSubmit}>
+                    {busy ? (<span>Please wait while your details are being sent to us</span>)
+                    : (<form onSubmit={this.onFormSubmit}>
 							<div>
 								<label>Choose subject:   </label>
 								<select
@@ -126,7 +134,8 @@ class ContactForm extends React.Component {
 							<div>
 								<button>Send</button>
 							</div>
-                        </form>
+                            {error && <span>Fill the form please</span> }
+                        </form>)}
                 </div>
                 </section>
             )
