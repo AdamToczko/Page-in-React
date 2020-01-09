@@ -45,7 +45,11 @@ class ContactForm extends React.Component {
 								<label>Choose subject:   </label>
 								<select
 									name='subject'
+                                    value={subject}
+                                    onChange={(event)=>
 
+                                    console.log(event.target.value)
+                                    }
 								>
 									<option disabled hidden value="hidden">Wybierz temat</option>
 									<option>Subject 1</option>
@@ -55,7 +59,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								required
+								    required
 									type='text'
 									name='fullName'
 									placeholder='Eneter your full name'
@@ -63,7 +67,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								required
+								    required
 									type='email'
 									placeholder='Eneter email'
 									name='email'
@@ -82,10 +86,10 @@ class ContactForm extends React.Component {
 							<div>
 								<label htmlFor='subscription'>
 									<input
-										id='subscription'
-										type='checkbox'
-										required
-										name='subscription'
+                                        required
+                                        id='subscription'
+                                        type='checkbox'
+                                        name='subscription'
 									
 									/>
 									Subscribe
