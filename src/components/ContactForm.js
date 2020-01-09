@@ -8,7 +8,7 @@ class ContactForm extends React.Component {
 		fullName: '',
 		email: '',
 		content: '',
-		subscription: '',
+		subscription: 'true',
 		busy: false,
 		error: false,
 	}
