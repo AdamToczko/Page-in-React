@@ -37,7 +37,7 @@ class ContactForm extends React.Component {
         
         const subjectIsValid = subject != ''
         const fullNameIsValid = fullName != ''
-        const emailIsValid = (email != '') && ((email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i)))
+        const emailIsValid = (email == email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i))
         const contentIsValid = content != ''
         const subscriptionIsValid = subscription === true // this condition just for testing purposes
 
@@ -108,7 +108,7 @@ class ContactForm extends React.Component {
 								    
 									type='text'
 									name='fullName'
-									placeholder='Eneter your full name'
+									placeholder='Enter your full name'
                                     value={fullName}
                                     onChange={(this.inputStateChange)}
 								/>
@@ -117,7 +117,7 @@ class ContactForm extends React.Component {
 								<input
 								  
 									type='email'
-									placeholder='Eneter email'
+									placeholder='Email: abc@ab.pl'
 									name='email'
                                     value={email}
                                     onChange={(this.inputStateChange)}
@@ -149,7 +149,7 @@ class ContactForm extends React.Component {
 							<div>
 								<button>Send</button>
 							</div>
-                            {error && <span>Fill the form please</span> }
+                            {error && <span>Fill the form correctly please</span> }
                         </form>)}
                 </div>
                 </section>
