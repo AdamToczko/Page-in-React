@@ -12,27 +12,6 @@ class ContactForm extends React.Component {
 		busy: false,
 		error: false,
     }
-    
-      // emulate sending form to server with setTimeout
-    onFormSubmit = (event) => {
-        event.preventDefault()
-
-        this.setState({
-            busy:true
-        })
-
-        setTimeout(()=>{ 
-            this.setState({
-                busy:false
-            })
-        console.log('text', this.state)
-        }, 2000)
-
-
-
-    }
-
-
 
     inputStateChange = (event) => {
         const {value, name, type, checked } = event.target
@@ -46,6 +25,55 @@ class ContactForm extends React.Component {
 			})
 		}
     }
+    // added form validation 
+    validateForm = () => {
+        const {
+			subject,
+			fullName,
+			email,
+			content,
+			subscription
+        } = this.state
+        
+        const subjectIsValid = subject != ''
+        const fullNameIsValid = fullName != ''
+        const emailIsValid = ((email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)))
+        const contentIsValid = content != ''
+        const subscriptionIsValid = subscription === true // this condition just for testing purposes
+
+        const conditions = [subjectIsValid, fullNameIsValid, emailIsValid, contentIsValid, subscriptionIsValid]
+		const conditionsAreValid = !conditions.includes(false)
+
+		return conditionsAreValid
+
+    }
+
+
+      // emulate sending form to server with setTimeout
+    onFormSubmit = (event) => {
+        event.preventDefault()
+
+        if(this.validateForm()){
+			this.setState({
+                busy:true
+            }) 
+        
+
+        setTimeout(()=>{ 
+            this.setState({
+                busy:false
+            })
+        console.log('text', this.state)
+        }, 2000)
+        }
+        else{
+			this.setState({
+                error:true
+            })
+    }
+}
+
+   
 
 
   
@@ -90,7 +118,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								    required
+								    
 									type='text'
 									name='fullName'
 									placeholder='Eneter your full name'
@@ -100,7 +128,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								    required
+								    
 									type='email'
 									placeholder='Eneter email'
 									name='email'
@@ -111,7 +139,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<textarea
-									required
+									
 									placeholder='Type your message'
 									name='content'
 									value={content}
@@ -121,7 +149,7 @@ class ContactForm extends React.Component {
 							<div>
 								<label htmlFor='subscription'>
 									<input
-                                        required
+                                        
                                         id='subscription'
                                         type='checkbox'
                                         name='subscription'
