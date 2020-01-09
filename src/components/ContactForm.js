@@ -11,10 +11,21 @@ class ContactForm extends React.Component {
 		subscription: true,
 		busy: false,
 		error: false,
-	}
+    }
+    
+      // emulate sending form to server with setTimeout
     onFormSubmit = (event) => {
         event.preventDefault()
+
+        setTimeout(()=>{ 
+        console.log('text', this.state)
+        }, 3000)
+
+
+
     }
+
+
 
     inputStateChange = (event) => {
         const {value, name, type, checked } = event.target
@@ -28,6 +39,8 @@ class ContactForm extends React.Component {
 			})
 		}
     }
+
+
   
     render(){
       
