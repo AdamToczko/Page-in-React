@@ -61,7 +61,13 @@ class ContactForm extends React.Component {
 
         setTimeout(()=>{ 
             this.setState({
-                busy:false
+                subject: 'hidden',
+                fullName: '',
+                email: '',
+                content: '',
+                subscription: true,
+                busy: false,
+                error: false,
             })
         console.log('text', this.state)
         }, 2000)
@@ -73,31 +79,12 @@ class ContactForm extends React.Component {
     }
 }
 
-   
-
 
   
     render(){
       
       const { subject, fullName, email, content, subscription, busy, error } = this.state
-    //   if(busy == true ) {
-    //     return (
-    //       <section className="offer" id="offer">
-    //        <div className="container">
-    //          <h1>Data is loading  </h1>
-    //        </div>
-    //      </section>
-    //    )
-    //   } else {
-    //       if(error) {
-    //         return(
-    //        <section className="offer" id="offer">
-    //        <div className="container">
-    //          <h1>Could not get data from server  </h1>
-    //        </div>
-    //      </section>)
-  
-    //       } else {
+
               return (
                <section className="contact" id="contact">
                     <div className="container">
