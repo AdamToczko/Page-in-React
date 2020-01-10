@@ -14,7 +14,7 @@ const Root = () => {
       <Header />
       
         <Switch>
-          <Route exact path="/" component={Hero} />
+          <Route exact path="/" component={App} />
           <Route exact path="/our-crew" component={OurCrew} />
           <Route exact path="/offer" component={Services} />
           <Route exact path="/contact" component={Contact} />

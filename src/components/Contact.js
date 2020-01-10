@@ -18,8 +18,9 @@ const Contact = () => {
             <p>Tel</p>
             <p> <a href="mailto:name@email.com">
               Contact us</a></p>
-          <ContactForm />
+          
           </div>
+          <ContactForm />
         </div>
       </section>
     )

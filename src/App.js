@@ -19,15 +19,7 @@ const Main = (props) => {
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main>
         <Hero selectedLang={'en'} />
-        <OurCrew />
-        <Services />
-        <Contact />
-      </Main>
-      <Footer />
-     
     </div>
   );
 }
