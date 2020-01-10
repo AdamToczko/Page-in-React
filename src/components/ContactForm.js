@@ -80,11 +80,10 @@ class ContactForm extends React.Component {
 }
     select = React.createRef(null)
     input = React.createRef(null)
-    
- 
-    componentDidMount(){
-        console.log('ref', this.input)
+    input1 = React.createRef(null)
+    input2 = React.createRef(null)
 
+    componentDidMount(){
         this.select.current.focus()
     }
 
@@ -101,6 +100,13 @@ class ContactForm extends React.Component {
 								<label>Choose subject:   </label>
 								<select
                                     ref={this.select}
+                                    onMouseDown={(event)=>{
+                                    console.log(event.target.value)
+
+                                    if(event.target.value !== 'hidden'){
+                                        this.input.current.focus()
+                                    } }}
+
 									name='subject'
                                     value={subject}
                                     onChange={(this.inputStateChange)}
@@ -114,8 +120,11 @@ class ContactForm extends React.Component {
 							<div>
 								<input
 								    ref={this.input}
-                                    onKeyDown={(event)=>
-                                    console.log(event.target.value)}
+                                    onKeyDown={(event)=>{
+                                    if(event.key === 'Enter'){
+                                        this.input1.current.focus()
+                                        }
+                                    }}
 
 									type='text'
 									name='fullName'
@@ -126,7 +135,12 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								  
+                                    ref={this.input1}
+                                    onKeyDown={(event)=>{
+                                    if(event.key === 'Enter'){
+                                        this.input2.current.focus()
+                                        }
+                                    }}
 									type='email'
 									placeholder='Email: abc@ab.pl'
 									name='email'
@@ -137,7 +151,7 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<textarea
-									
+                                    ref={this.input2}
 									placeholder='Type your message'
 									name='content'
 									value={content}
