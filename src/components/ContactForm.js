@@ -101,7 +101,6 @@ class ContactForm extends React.Component {
 								<select
                                     ref={this.select}
                                     onMouseDown={(event)=>{
-                                    console.log(event.target.value)
 
                                     if(event.target.value !== 'hidden'){
                                         this.input.current.focus()
