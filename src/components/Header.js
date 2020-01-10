@@ -1,15 +1,55 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <header>
             <nav>
                 <div className="container">
-                    <a href="#">Company name</a>
+                    <NavLink
+                    activeStyle={{
+                    color: "gold",
+                    textDecoration: "none"
+                    }}
+                    to="/"
+                    exact
+                    >
+                    Home/Company logo 
+                    </NavLink>
+                    
                     <div className="nav-right">
-                        <a href="#our-crew">About us </a>
-                        <a href="#offer">Our offer</a>
-                        <a href="#contact">Contact Us</a>
+                    <NavLink
+                    activeStyle={{
+                    color: "gold",
+                    textDecoration: "none"
+                    }}
+                    to="/our-crew"
+                    exact
+                    >
+                    About us    
+                    </NavLink>
+
+                    <NavLink
+                    activeStyle={{
+                    color: "gold",
+                    textDecoration: "none"
+                    }}
+                    to="/offer"
+                    exact
+                    >
+                    Our offer  
+                    </NavLink>
+
+                    <NavLink
+                    activeStyle={{
+                    color: "gold",
+                    textDecoration: "none"
+                    }}
+                    to="/contact"
+                    exact
+                    >
+                    Contact Us
+                    </NavLink>
                     </div>
                     <button className="nav-toggler">
                         <i className="fas fa-bars"></i>
