@@ -78,9 +78,16 @@ class ContactForm extends React.Component {
             })
     }
 }
+    select = React.createRef(null)
+    input = React.createRef(null)
+    
+ 
+    componentDidMount(){
+        console.log('ref', this.input)
 
+        this.select.current.focus()
+    }
 
-  
     render(){
       
       const { subject, fullName, email, content, subscription, busy, error } = this.state
@@ -93,6 +100,7 @@ class ContactForm extends React.Component {
 							<div>
 								<label>Choose subject:   </label>
 								<select
+                                    ref={this.select}
 									name='subject'
                                     value={subject}
                                     onChange={(this.inputStateChange)}
@@ -105,7 +113,10 @@ class ContactForm extends React.Component {
 							</div>
 							<div>
 								<input
-								    
+								    ref={this.input}
+                                    onKeyDown={(event)=>
+                                    console.log(event.target.value)}
+
 									type='text'
 									name='fullName'
 									placeholder='Enter your full name'
