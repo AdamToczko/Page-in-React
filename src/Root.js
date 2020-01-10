@@ -6,7 +6,6 @@ import Footer  from "./components/Footer";
 import OurCrew from "./components/OurCrew";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Hero from "./components/Hero";
 
 const Root = () => {
     return (

@@ -35,10 +35,10 @@ class ContactForm extends React.Component {
 			subscription
         } = this.state
         
-        const subjectIsValid = subject != ''
-        const fullNameIsValid = fullName != ''
-        const emailIsValid = (email == email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i))
-        const contentIsValid = content != ''
+        const subjectIsValid = subject !== ''
+        const fullNameIsValid = fullName !== ''
+        const emailIsValid = (email === email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i))
+        const contentIsValid = content !== ''
         const subscriptionIsValid = subscription === true // this condition just for testing purposes
 
         const conditions = [subjectIsValid, fullNameIsValid, emailIsValid, contentIsValid, subscriptionIsValid]
@@ -110,7 +110,7 @@ class ContactForm extends React.Component {
                                     value={subject}
                                     onChange={(this.inputStateChange)}
 								>
-									<option disabled hidden value="hidden">Wybierz temat</option>
+									<option disabled hidden value="hidden">Choose subject</option>
 									<option>Subject 1</option>
 									<option>Subject 2</option>
 									<option>Subject 3</option>

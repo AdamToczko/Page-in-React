@@ -30,7 +30,7 @@ class Services extends React.Component {
   render(){
 
     const { services, busy, error } = this.state
-    if(busy == true ) {
+    if(busy === true ) {
       return (
         <section className="offer" id="offer">
          <div className="container">

@@ -1,20 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
 import Hero from './components/Hero';
-import OurCrew from './components/OurCrew';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-
-const Main = (props) => {
-  const {children} = props
-  return (
-    <main>
-    {children}
-    </main>
-  ) 
-}
 
 function App() {
   return (
