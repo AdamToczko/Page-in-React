@@ -1,3 +1,6 @@
+I am taking this basic static page https://github.com/AdamToczko/Page1
+and changing it to react app adding functionalities 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
