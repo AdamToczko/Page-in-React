@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Modal } from 'semantic-ui-react';
 
 
 class ContactForm extends React.Component {
@@ -92,8 +93,14 @@ class ContactForm extends React.Component {
       const { subject, fullName, email, content, subscription, busy, error } = this.state
 
               return (
-               <section className="contact" id="contact">
-                    <div className="container">
+               <section 
+               style={{
+                  display: "block",
+                  textAlign: "center",
+                  margin: "0 auto",
+                  maxWidth: "70%"
+                }}>
+                    <div >
                     {busy ? (<span>Please wait while your details are being sent to us</span>)
                     : (<form onSubmit={this.onFormSubmit}>
 							<div>

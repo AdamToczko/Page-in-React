@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import { Button, Modal } from 'semantic-ui-react';
+import { Modal, Button} from "semantic-ui-react";
 
 class Contact extends React.Component {
 
