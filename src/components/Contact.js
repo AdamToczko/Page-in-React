@@ -1,7 +1,21 @@
 import React from 'react';
 import ContactForm from './ContactForm';
+import { Button, Modal } from 'semantic-ui-react';
 
 class Contact extends React.Component {
+
+  state = {
+    clicked: false
+  }
+
+  handleClick = (event) => {
+    event.preventDefault()
+    
+    this.setState({
+      clicked: true
+    })
+  }
+
   render(){
     return (
  <section className="contact" id="contact">
@@ -17,7 +31,8 @@ class Contact extends React.Component {
               Postcode
                     </p>
             <p>Tel</p>
-            <button onClick={handleClick}>
+            <button onClick={this.handleClick}>
+            {this.state.clicked ? <ContactForm /> : null}
               >Contact us</button>
           
           </div>
