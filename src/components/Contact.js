@@ -4,8 +4,8 @@ import { Modal, Button} from "semantic-ui-react";
 
 class Contact extends React.Component {
 
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = { 
         modal: false
     }
@@ -32,9 +32,9 @@ onClick() {
                     </p>
             <p>Tel</p>
             <button onClick={ () =>  { this.onClick(); }} >
-              >Contact us</button>
+              Contact us</button>
               <Modal open={this.state.modal} >
-                    <ContactForm onSuccess={() => this.onClick()}/>
+                    <ContactForm {...this.props} onSuccess={() => this.onClick()}/>
                     <Modal.Actions>
                     <Button negative onClick={() => this.onClick()}>Close</Button>
                     </Modal.Actions>
