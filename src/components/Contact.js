@@ -4,17 +4,17 @@ import { Button, Modal } from 'semantic-ui-react';
 
 class Contact extends React.Component {
 
-  state = {
-    clicked: false
-  }
+  constructor(props){
+    super(props);
+    this.state = { 
+        modal: false
+    }
+}
 
-  handleClick = (event) => {
-    event.preventDefault()
+onClick() {
     
-    this.setState({
-      clicked: true
-    })
-  }
+    this.setState({ modal: !this.state.modal});
+}
 
   render(){
     return (
@@ -31,9 +31,14 @@ class Contact extends React.Component {
               Postcode
                     </p>
             <p>Tel</p>
-            <button onClick={this.handleClick}>
-            {this.state.clicked ? <ContactForm /> : null}
+            <button onClick={ () =>  { this.onClick(); }} >
               >Contact us</button>
+              <Modal open={this.state.modal} >
+                    <ContactForm onSuccess={() => this.onClick()}/>
+                    <Modal.Actions>
+                    <Button negative onClick={() => this.onClick()}>Close</Button>
+                    </Modal.Actions>
+                </Modal>
           
           </div>
         </div>
