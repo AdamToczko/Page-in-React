@@ -1,7 +1,8 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 
-const Contact = () => {
+class Contact extends React.Component {
+  render(){
     return (
  <section className="contact" id="contact">
         <div className="container">
@@ -16,14 +17,13 @@ const Contact = () => {
               Postcode
                     </p>
             <p>Tel</p>
-            <p> <a href="mailto:name@email.com">
-              Contact us</a></p>
+            <button onClick={handleClick}>
+              >Contact us</button>
           
           </div>
-          <ContactForm />
         </div>
       </section>
     )
-}
+}}
 
 export default Contact;
