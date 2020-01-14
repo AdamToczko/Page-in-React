@@ -1,0 +1,15 @@
+.wrapper {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 70%;
+    margin-top: 3%;
+}
+
+.message {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 70%;
+    margin-top: 3%;
+    color: red;
+}

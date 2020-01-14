@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './ContactForm.module.css'
 
 class ContactForm extends React.Component {
 
@@ -89,19 +89,15 @@ class ContactForm extends React.Component {
     }
 
     render(){
-      
+       
       const { subject, fullName, email, content, subscription, busy, error } = this.state
 
               return (
                <section 
-               style={{
-                  display: "block",
-                  textAlign: "center",
-                  margin: "0 auto",
-                  maxWidth: "70%"
-                }}>
+               className={styles.wrapper}
+                > 
                     <div >
-                    {busy ? (<span>Please wait while your details are being sent to us</span>)
+                    {busy ? (<span  className={styles.message}>Please wait while your details are being sent to us</span>)
                     : (<form onSubmit={this.onFormSubmit}>
 							<div>
 								<label>Choose subject:   </label>
@@ -180,7 +176,7 @@ class ContactForm extends React.Component {
 							<div>
 								<button>Send</button>
 							</div>
-                            {error && <span>Fill the form correctly please</span> }
+                            {error && <span className={styles.message}>Fill the form correctly please</span> }
                         </form>)}
                 </div>
                 </section>
