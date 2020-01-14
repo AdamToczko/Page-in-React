@@ -34,7 +34,7 @@ onClick() {
             <button onClick={ () =>  { this.onClick(); }} >
               Contact us</button>
               <Modal open={this.state.modal} >
-                    <ContactForm {...this.props} onSuccess={() => this.onClick()}/>
+                    <ContactForm />
                     <Modal.Actions>
                     <Button negative onClick={() => this.onClick()}>Close</Button>
                     </Modal.Actions>

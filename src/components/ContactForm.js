@@ -37,7 +37,8 @@ class ContactForm extends React.Component {
         
         const subjectIsValid = subject !== ''
         const fullNameIsValid = fullName !== ''
-        const emailIsValid = (email === email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i))
+        // const emailIsValid = email !== ''
+        const emailIsValid = (email == email.match(/^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,}[a-z]{2,}$/i))
         const contentIsValid = content !== ''
         const subscriptionIsValid = subscription === true // this condition just for testing purposes
 
