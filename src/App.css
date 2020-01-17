@@ -242,20 +242,31 @@ footer .container {
 
 }
 
-.social-icon {
+.social-icon1 {
   background: none;
   border: none;
   color: #F1F1F1;
   font-size: 30px;  
-  margin-right: 50px;
+  position: fixed;
+  right: 20px;
   
 }
 
-.social-icon:first-of-type {
+.social-icon2 {
+  background: none;
+  border: none;
+  color: #F1F1F1;
+  font-size: 30px;  
+  position: fixed;
+  right: 70px;
+  
+}
+
+/* .social-icon:first-of-type {
   margin-right: 0;
   margin-left: 100px;
   
-} 
+}  */
 
 .footerBox {
   position: fixed;
@@ -323,16 +334,16 @@ footer .container {
     
 }
 
-.social-icon {
+/* .social-icon {
     display: flex;
     justify-content: flex-end;
     
-}
+} */
 
-.social-icon:first-of-type {
+/* .social-icon:first-of-type {
     margin-right: 0;
     margin-left: 0;
-} 
+}  */
 
   }
 

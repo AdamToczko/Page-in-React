@@ -4,14 +4,15 @@ const Footer = () => {
     return (
     <footer className="footerBox">
         <div className="container">
-          <h4>&copy; Adam Toczko, 2019</h4>
-        </div>
-        <button className="social-icon">
-          <i className="fab fa-instagram"></i>
-        </button>
-        <button className="social-icon">
-          <i className="fab fa-facebook-square"></i>
-        </button>
+          <h4>&copy; Adam Toczko, 2020</h4>
+       
+          <a className="social-icon1" target="_blank" href="https://www.instagram.com/">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a className="social-icon2" target="_blank" href="https://www.facebook.com/">
+            <i className="fab fa-facebook-square"></i>
+          </a>
+          </div>
       </footer>
     )
 }
