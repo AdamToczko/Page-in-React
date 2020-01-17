@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-    <footer>
+    <footer className="footerBox">
         <div className="container">
           <h4>&copy; Adam Toczko, 2019</h4>
         </div>
