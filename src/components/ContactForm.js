@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ContactForm.module.css'
+import { Button} from "semantic-ui-react";
 
 class ContactForm extends React.Component {
 
@@ -174,7 +175,7 @@ class ContactForm extends React.Component {
 								</label>
 							</div>
 							<div  className={styles.inputWrapper}>
-								<button>Send</button>
+								<Button>Send</Button>
 							</div>
                             {error && <span className={styles.message}>Fill the form correctly please</span> }
                         </form>)}

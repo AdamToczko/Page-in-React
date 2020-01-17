@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from "semantic-ui-react";
 
 const langs = {
     'pl':"Oferujemy najwyższą jakość usług ", 
@@ -14,7 +15,7 @@ const Hero = ({selectedLang='en'}) => {
                     <div className="landing-page-text">
                         <h1>{langs[selectedLang]} </h1>
                         <h2>Check us out </h2>
-                        <button className="btn">Special offer</button>
+                        <Button  inverted className="btn">Special offer</Button>
                     </div>
                 </div>
             </div>

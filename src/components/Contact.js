@@ -31,8 +31,8 @@ onClick() {
               Postcode
                     </p>
             <p>Tel</p>
-            <button onClick={ () =>  { this.onClick(); }} >
-              Contact us</button>
+            <Button onClick={ () =>  { this.onClick(); }} >
+              Contact us</Button>
               <Modal open={this.state.modal} 
               style={{ fontSize: '1.5em'}} 
               >
