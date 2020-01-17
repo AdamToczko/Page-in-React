@@ -13,3 +13,20 @@
     margin-top: 3%;
     color: red;
 }
+
+.inputWrapper {
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.input1 {
+    width: 60%;
+}
+
+.input2 {
+    margin-right: 2%;
+}

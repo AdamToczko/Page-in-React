@@ -99,9 +99,8 @@ class ContactForm extends React.Component {
                     <div >
                     {busy ? (<span  className={styles.message}>Please wait while your details are being sent to us</span>)
                     : (<form onSubmit={this.onFormSubmit}>
-							<div>
-								<label>Choose subject:   </label>
-								<select
+							<div  className={styles.inputWrapper}>
+								<select className={styles.input1}
                                     ref={this.select}
                                     onMouseDown={(event)=>{
 
@@ -119,8 +118,8 @@ class ContactForm extends React.Component {
 									<option>Subject 3</option>
 								</select>
 							</div>
-							<div>
-								<input
+							<div  className={styles.inputWrapper}>
+								<input className={styles.input1}
 								    ref={this.input}
                                     onKeyDown={(event)=>{
                                     if(event.key === 'Enter'){
@@ -135,14 +134,15 @@ class ContactForm extends React.Component {
                                     onChange={(this.inputStateChange)}
 								/>
 							</div>
-							<div>
-								<input
+							<div  className={styles.inputWrapper}>
+								<input className={styles.input1}
                                     ref={this.input1}
                                     onKeyDown={(event)=>{
                                     if(event.key === 'Enter'){
                                         this.input2.current.focus()
                                         }
                                     }}
+                                    
 									type='email'
 									placeholder='Email: abc@ab.pl'
 									name='email'
@@ -151,7 +151,7 @@ class ContactForm extends React.Component {
 							
 								/>
 							</div>
-							<div>
+							<div  className={styles.inputWrapper}>
 								<textarea
                                     ref={this.input2}
 									placeholder='Type your message'
@@ -160,9 +160,9 @@ class ContactForm extends React.Component {
                                     onChange={(this.inputStateChange)}
 								/>
 							</div>
-							<div>
-								<label htmlFor='subscription'>
-									<input
+							<div  className={styles.inputWrapper}>
+								<label htmlFor='subscription'><br/>
+									<input className={styles.input2}
                                         
                                         id='subscription'
                                         type='checkbox'
@@ -173,7 +173,7 @@ class ContactForm extends React.Component {
 									Subscribe
 								</label>
 							</div>
-							<div>
+							<div  className={styles.inputWrapper}>
 								<button>Send</button>
 							</div>
                             {error && <span className={styles.message}>Fill the form correctly please</span> }
