@@ -28,9 +28,9 @@ class Toggler extends React.Component {
 					    <h2 style={{color: 'gold', marginBottom: 10}}>{title} - click me {icon}</h2>
                     </a>
                    
-                 {isShowed &&   <div >
+                 <div className={['animated', isShowed ? 'fadeIn' : 'fadeOut'].join(' ')} >
                     <h5>{children}</h5>
-                                </div>}
+                                </div>
 			    </div>
         )
     }

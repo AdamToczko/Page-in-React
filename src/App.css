@@ -280,6 +280,20 @@ footer .container {
   display: flex;
 }
 
+.animated {
+  transition: all .7s ease-in;
+}
+
+.fadeOut {
+  opacity: 0;
+  max-height: 0;
+}
+.fadeIn {
+  opacity: 1;
+  max-height: 100px;
+}
+
+
 
 
 @media only screen and (min-width: 768px) {
