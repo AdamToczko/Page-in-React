@@ -19,7 +19,7 @@ onClick() {
   render(){
     return (
  <section className="contact" id="contact">
-        <div className="container">
+        <div className="container" id="containerContact">
           <h1>Contact details: </h1>
           <h2>How to find us:</h2>
 
