@@ -16,7 +16,11 @@ const Hero = ({selectedLang='en'}) => {
                     <div className="landing-page-text">
                         <h1>{langs[selectedLang]} </h1>
                         
-                        <Toggler>
+                        <Toggler title={'Toggler 1'}>
+                            <h3>Buy 1 get 1 free</h3>
+                            <h3>Buy 3 get 2 free</h3>
+                        </Toggler>
+                        <Toggler title={'Toggler 2'}> 
                             <h3>Buy 1 get 1 free</h3>
                             <h3>Buy 3 get 2 free</h3>
                         </Toggler>
