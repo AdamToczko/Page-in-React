@@ -13,6 +13,18 @@ class Toggler extends React.Component {
         })
     }
 
+    componentDidMount(){
+        const { showOnInit } = this.props
+
+        if(showOnInit){
+            console.log('showOnInit jest', showOnInit)
+            this.setState({
+                isShowen: showOnInit
+            })
+        }
+
+    }
+
     
 
     render() {
