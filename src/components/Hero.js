@@ -22,14 +22,15 @@ const Hero = ({selectedLang='en'}) => {
                             <h3>Buy 3 get 2 free</h3>
                         </Toggler>
                         </div>
+                       
+                        </div>   
+                        <Button  inverted className="btn">Special offer</Button>
                         <div>
                         <Toggler title={'Toggler 2'} showOnInit={false}> 
                             <h3>Buy 1 get 1 free</h3>
                             <h3>Buy 3 get 2 free</h3>
                         </Toggler>
                         </div>
-                        </div>   
-                        <Button  inverted className="btn">Special offer</Button>
                     </div>
                 </div>
             </div>

@@ -25,8 +25,6 @@ class Toggler extends React.Component {
 
     }
 
-    
-
     render() {
         const {isShowen} = this.state
         const {children, title} = this.props
