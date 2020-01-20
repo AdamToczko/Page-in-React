@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "semantic-ui-react";
-import Toggler from './Toggler';
+import Toggler from "./Toggler"
 
 const langs = {
     'pl':"Oferujemy najwyższą jakość usług ", 
@@ -15,11 +15,12 @@ const Hero = ({selectedLang='en'}) => {
                 <div className="container">
                     <div className="landing-page-text">
                         <h1>{langs[selectedLang]} </h1>
-                        <h2>Check us out </h2>
-                        <Button  inverted className="btn">Special offer</Button>
+                        
                         <Toggler>
-                            <strong>Testing</strong>
+                            <h3>Buy 1 get 1 free</h3>
+                            <h3>Buy 3 get 2 free</h3>
                         </Toggler>
+                        <Button  inverted className="btn">Special offer</Button>
                     </div>
                 </div>
             </div>
