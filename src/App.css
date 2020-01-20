@@ -293,6 +293,16 @@ footer .container {
   max-height: 100px;
 }
 
+.togglerContainer {
+  margin: 20px;
+  width: 200px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.togglerTitle {
+  color: 'gold';
+  margin-bottom: 10px;
+}
 
 
 
