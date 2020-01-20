@@ -29,7 +29,7 @@ class Toggler extends React.Component {
                     </a>
                    
                  {isShowed &&   <div >
-                    <span>{children}</span>
+                    <h5>{children}</h5>
                                 </div>}
 			    </div>
         )

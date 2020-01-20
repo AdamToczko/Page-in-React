@@ -15,15 +15,20 @@ const Hero = ({selectedLang='en'}) => {
                 <div className="container">
                     <div className="landing-page-text">
                         <h1>{langs[selectedLang]} </h1>
-                        
+                        <div className="toggler">
+                         <div>
                         <Toggler title={'Toggler 1'}>
                             <h3>Buy 1 get 1 free</h3>
                             <h3>Buy 3 get 2 free</h3>
                         </Toggler>
+                        </div>
+                        <div>
                         <Toggler title={'Toggler 2'}> 
                             <h3>Buy 1 get 1 free</h3>
                             <h3>Buy 3 get 2 free</h3>
                         </Toggler>
+                        </div>
+                        </div>   
                         <Button  inverted className="btn">Special offer</Button>
                     </div>
                 </div>

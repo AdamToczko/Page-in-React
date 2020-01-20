@@ -274,6 +274,14 @@ footer .container {
   width: 100vw;
 }
 
+/* Toggler */
+
+.toggler {
+  display: flex;
+}
+
+
+
 @media only screen and (min-width: 768px) {
   .container {
     width: 760px;
