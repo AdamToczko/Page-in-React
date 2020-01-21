@@ -17,7 +17,7 @@ class Toggler extends React.Component {
         const { showOnInit } = this.props
 
         if(showOnInit){
-            console.log('showOnInit jest', showOnInit)
+
             this.setState({
                 isShown: showOnInit
             })
@@ -32,9 +32,9 @@ class Toggler extends React.Component {
 
         return (
             	<div className='togglerContainer'>
-				    <a  onClick={this.toggle}>
+				    <button  onClick={this.toggle}>
 					    <h2 className='togglerTitle'>{title} - click me {icon}</h2>
-                    </a>
+                    </button>
                    
                  <div className={['animated', isShown ? 'fadeIn' : 'fadeOut'].join(' ')} >
                     {children}
