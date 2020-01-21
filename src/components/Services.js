@@ -33,7 +33,7 @@ class Services extends React.Component {
     if(busy === true ) {
       return (
         <section className="offer" id="offer">
-         <div className="container">
+         <div className="containerServices">
            <h1>Data is loading  </h1>
          </div>
        </section>
@@ -42,7 +42,7 @@ class Services extends React.Component {
         if(error) {
           return(
          <section className="offer" id="offer">
-         <div className="container">
+         <div className="containerServices">
            <h1>Could not get data from server  </h1>
          </div>
        </section>)
@@ -50,7 +50,7 @@ class Services extends React.Component {
         } else {
             return (
               <section className="offer" id="offer">
-              <div className="container">
+              <div className="containerServices">
                 <h1>We offer following services: </h1>
                 <div className="box-container">
                 {services.map((element, idx) => {
