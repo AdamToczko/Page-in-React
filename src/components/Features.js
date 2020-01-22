@@ -8,9 +8,9 @@ const Features = () => {
         <div className="container">
           <h1>Testing new features</h1>
             <Stepper >
-                <div>step 1</div>
-                <div>step 2</div>
-                <div>step 3</div>
+                <div title={'Preparing'}>step 1</div>
+                <div title={'Processing'}>step 2</div>
+                <div title={'Submitting'}>step 3</div>
             </Stepper>
     </div>
       </section>
