@@ -50,6 +50,16 @@ const Header = () => {
                     >
                     Contact Us
                     </NavLink>
+                    <NavLink
+                    activeStyle={{
+                    color: "gold",
+                    textDecoration: "none"
+                    }}
+                    to="/features"
+                    exact
+                    >
+                    New Features
+                    </NavLink>
                     </div>
                     <button className="nav-toggler">
                         <i className="fas fa-bars"></i>
