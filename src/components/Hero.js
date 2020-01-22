@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "semantic-ui-react";
-import Toggler from "./Toggler"
+import Toggler from "./testFeatures/Toggler"
 
 const langs = {
     'pl':"Oferujemy najwyższą jakość usług ", 
