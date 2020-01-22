@@ -318,6 +318,30 @@ button {
   outline: none;
 }
 
+/* Stepper */
+
+.stepperContainer {
+  margin: 20px;
+  box-shadow:3px 3px 5px rgba(11,100,0,0.5);
+  width: 40%;
+}
+
+.stepperHeader {
+  display: block;
+  background: #ffe;
+  padding: 10px;
+
+}
+
+.stepperDisplay {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  background: #eee;
+  padding: 10px;
+  font-size: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     width: 760px;

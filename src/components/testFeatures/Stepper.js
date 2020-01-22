@@ -26,20 +26,21 @@ class Stepper extends React.Component {
         
 
         return (
-			<div style={{margin:20,  boxShadow:'3px 3px 5px rgba(11,100,0,0.5)'}}>
-                <div style={{ display:'block', background: '#fff', padding:10 }} >
+			<div className='stepperContainer'>
+                <div className='stepperHeader'  >
                     {children.map((child, index)=>{
-                        return (<Steps key={index} title={child.props.title} 
+                        
+                        return (<Steps key={index} title={child.props.title}  
                         onChangeStep={()=>{
                             this.setStep(index)
-                        }
-                        }
-                        />)
-                    }
-                    )}
+                        }}
+                        />
+                        )}
+                    )} 
                 </div>    
-                <div style={{ display:'block', background: '#eee', padding:10 }} >
-                   {actualChild.props.children}
+                <div className='stepperDisplay' >
+                   {actualChild.props.children } 
+                   
                 </div>    
 			</div>
 		)
