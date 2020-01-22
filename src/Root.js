@@ -6,6 +6,7 @@ import Footer  from "./components/Footer";
 import OurCrew from "./components/OurCrew";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
+import Features from "./components/Features";
 
 const Root = () => {
     return (
@@ -17,6 +18,7 @@ const Root = () => {
           <Route exact path="/our-crew" component={OurCrew} />
           <Route exact path="/offer" component={Services} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/contact" component={Features} />
         </Switch>
         <Footer />
     </Router>
