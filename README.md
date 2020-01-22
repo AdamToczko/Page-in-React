@@ -1,5 +1,7 @@
 I am taking this basic static page https://github.com/AdamToczko/Page1
-and changing it to react app adding functionalities 
+and changing it to react app 
+then adding new functionalities along the way 
+and testing new features 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
