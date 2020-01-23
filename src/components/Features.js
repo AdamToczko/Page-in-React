@@ -1,5 +1,6 @@
 import React from 'react';
 import Stepper from './testFeatures/Stepper';
+import NavDrop from './NavDrop';
 
 
 const Features = () => {
@@ -12,7 +13,8 @@ const Features = () => {
                 <div title={'step 2'}>Processing</div>
                 <div title={'step 3'}>Submitting</div>
             </Stepper>
-    </div>
+        </div>
+        <NavDrop />
       </section>
     )
 }

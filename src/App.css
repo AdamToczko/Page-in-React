@@ -342,6 +342,18 @@ button {
   font-size: 20px;
 }
 
+/* Dropdown Menue */
+.navRightDrop {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  line-height: 30px;
+  background: #4E4E4E;
+  width: 26%;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     width: 760px;
