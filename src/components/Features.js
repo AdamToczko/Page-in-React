@@ -14,7 +14,6 @@ const Features = () => {
                 <div title={'step 3'}>Submitting</div>
             </Stepper>
         </div>
-        <NavDrop />
       </section>
     )
 }
