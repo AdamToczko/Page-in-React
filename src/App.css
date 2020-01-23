@@ -321,9 +321,9 @@ button {
 /* Stepper */
 
 .stepperContainer {
-  margin: 20px;
+  margin: 1%;
   box-shadow:3px 3px 5px rgba(11,100,0,0.5);
-  width: 40%;
+  width: 100%;
 }
 
 .stepperHeader {
@@ -428,7 +428,14 @@ footer .container {
     margin-left: 0;
 }  */
 
+.stepperContainer {
+  margin: 5%;
+  box-shadow:3px 3px 5px rgba(11,100,0,0.5);
+  width: 60%;
+}
+
   }
+  
 
 @media only screen and (min-width: 1024px) {
   .container {
