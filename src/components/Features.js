@@ -1,6 +1,5 @@
 import React from 'react';
 import Stepper from './testFeatures/Stepper';
-import NavDrop from './NavDrop';
 
 
 const Features = () => {
