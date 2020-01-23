@@ -81,7 +81,9 @@ class Header extends React.Component {
                     </button>
                 </div>
             </nav>
-            {isShown && <NavDrop />}
+            <div className={['animated', isShown ? 'fadeIn' : 'fadeOut'].join(' ')} >
+                <NavDrop />
+            </div>
             
         </header>)}
 }
