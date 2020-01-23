@@ -425,6 +425,11 @@ footer .container {
   padding-bottom: 150px;
 }
 
+.offer {
+ 
+  height: 100vh;
+}
+
 /* .social-icon {
     display: flex;
     justify-content: flex-end;
