@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
-    return (
+class Header extends React.Component {
+    render(){
+        return (
         <header>
             <nav>
                 <div className="container">
@@ -66,7 +67,7 @@ const Header = () => {
                     </button>
                 </div>
             </nav>
-        </header>)
+        </header>)}
 }
 
 
