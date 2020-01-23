@@ -10,6 +10,8 @@ const SingleService = ({serviceText='Service', isNew = false, onElementClick}) =
 
 class Services extends React.Component {
 
+  _isMounted = false;
+
   state = {
     services: [],
     busy: true,
@@ -17,14 +19,22 @@ class Services extends React.Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
 
     // simulated loading data from server 
+
     setTimeout(()=>{
+      if (this._isMounted) {
       this.setState({
         services: services,
         busy: false,
       })
-  },3000)
+    }},3000)
+
+}
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render(){
