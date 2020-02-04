@@ -10,6 +10,7 @@ const langs = {
 
 const Hero = ({selectedLang='en'}) => {
     return (
+        <div className="page">
         <section className="landing-page">
             <div className="landing-page-shadow">
                 <div className="container">
@@ -35,6 +36,7 @@ const Hero = ({selectedLang='en'}) => {
                 </div>
             </div>
         </section>
+        </div>
     )
 }
 export default Hero;

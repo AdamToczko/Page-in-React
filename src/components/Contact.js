@@ -18,6 +18,7 @@ onClick() {
 
   render(){
     return (
+      <div className="page">
  <section className="contact" id="contact">
         <div className="container" id="containerContact">
           <h1>Contact details: </h1>
@@ -45,6 +46,7 @@ onClick() {
           </div>
         </div>
       </section>
+      </div>
     )
 }}
 

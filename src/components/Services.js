@@ -59,6 +59,7 @@ class Services extends React.Component {
 
         } else {
             return (
+              <div className="page">
               <section className="offer" id="offer">
               <div className="containerServices">
                 <h1>We offer following services: </h1>
@@ -76,6 +77,7 @@ class Services extends React.Component {
                 </div>
               </div>
             </section>
+            </div>
           )
           }}
 

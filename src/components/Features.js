@@ -4,6 +4,7 @@ import Stepper from './testFeatures/Stepper';
 
 const Features = () => {
     return (
+      <div className="page">
         <section className="our-crew" id="our-crew">
         <div className="container">
           <h1>Testing new features</h1>
@@ -14,6 +15,7 @@ const Features = () => {
             </Stepper>
         </div>
       </section>
+      </div>
     )
 }
 export default Features;

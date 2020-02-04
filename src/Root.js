@@ -18,15 +18,15 @@ const Root = () => {
                 <TransitionGroup>
                     <CSSTransition
                     key={location.key}
-                    timeout={450}
+                    timeout={3000}
                     classNames="fade"
                     >
-                        <Switch>
+                        <Switch location={location}>
                             <Route exact path="/" component={App} />
-                            <Route exact path="/our-crew" component={OurCrew} />
-                            <Route exact path="/offer" component={Services} />
-                            <Route exact path="/contact" component={Contact} />
-                            <Route exact path="/features" component={Features} />
+                            <Route  path="/our-crew" component={OurCrew} />
+                            <Route  path="/offer" component={Services} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/features" component={Features} />
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
