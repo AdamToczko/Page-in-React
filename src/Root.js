@@ -8,21 +8,26 @@ import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Features from "./components/Features";
 
-// import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Root = () => {
     return (
 <Router>
       <Header />
-      
-            <Switch>
-              <Route exact path="/" component={App} />
-              <Route exact path="/our-crew" component={OurCrew} />
-              <Route exact path="/offer" component={Services} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/features" component={Features} />
-            </Switch>
-        
+        <TransitionGroup>
+            <CSSTransition
+              timeout={500}
+              classNames="fade"
+            >
+                <Switch>
+                <Route exact path="/" component={App} />
+                <Route exact path="/our-crew" component={OurCrew} />
+                <Route exact path="/offer" component={Services} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/features" component={Features} />
+                </Switch>
+            </CSSTransition>
+        </TransitionGroup>
         <Footer />
     </Router>
 );
