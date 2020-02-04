@@ -18,7 +18,7 @@ const Root = () => {
                 <TransitionGroup>
                     <CSSTransition
                     key={location.key}
-                    timeout={3000}
+                    timeout={450}
                     classNames="fade"
                     >
                         <Switch location={location}>
