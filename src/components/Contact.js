@@ -1,22 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactForm from './ContactForm';
 import { Modal, Button} from "semantic-ui-react";
 
 
-class Contact extends React.Component {
+const Contact = () => {
 
+  const [modal, setModal] = useState(false)
  
-    state = { 
-        modal: false
-    }
-
-
-onClick() {
-    
-    this.setState({ modal: !this.state.modal});
-}
-
-  render(){
     return (
       <div className="page">
  <section className="contact" id="contact">
@@ -32,14 +22,14 @@ onClick() {
               Postcode
                     </p>
             <p>Tel</p>
-            <Button onClick={ () =>  { this.onClick(); }} >
+            <Button onClick={()=> setModal(!modal)} >
               Contact us</Button>
-              <Modal open={this.state.modal} 
+              <Modal open={modal} 
               style={{ fontSize: '1.5em'}} 
               >
                     <ContactForm  />
                     <Modal.Actions>
-                    <Button negative onClick={() => this.onClick()}>Close</Button>
+                    <Button negative onClick={()=> setModal(!modal)}>Close</Button>
                     </Modal.Actions>
                 </Modal>
           
@@ -48,6 +38,6 @@ onClick() {
       </section>
       </div>
     )
-}}
+}
 
 export default Contact;
