@@ -1,22 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import NavDrop from './NavDrop';
 
-class Header extends React.Component {
-    state = {
-        isShown: false
-    }
-
-    toggle = () => {
-        const {isShown } = this.state
-        this.setState({
-            isShown: !isShown
-        })
-    }
-
-    render(){
-        const {isShown} = this.state
-
+const Header = () => {
+    const [isShown, setIsShown] = useState(false)
         return (
         <header>
             <nav>
@@ -76,7 +63,7 @@ class Header extends React.Component {
                     New Features
                     </NavLink>
                     </div>
-                    <button onClick={this.toggle} className="nav-toggler">
+                    <button onClick={()=> setIsShown(!isShown)} className="nav-toggler">
                         <i className="fas fa-bars"></i>
                     </button>
                 </div>
@@ -86,7 +73,6 @@ class Header extends React.Component {
             </div>
             
         </header>)}
-}
 
 
 export default Header;
